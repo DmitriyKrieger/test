@@ -1,0 +1,11 @@
+.poleZaprosa{
+    display: inline-flex;
+}input{
+    position: absolute;
+    margin-left: 90px;
+    margin-top: 15px;
+}
+.active{
+   color:green;
+   font-size: x-large;
+}

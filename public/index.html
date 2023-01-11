@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ 
+ 
+   
+    
+    <link rel="stylesheet" href="styles.css">
+    <title>My server</title>
+</head>
+<body>
+    
+    <div id="app">
+       
+        <div class="poleZaprosa">
+            <p>Запрос</p> 
+            <input  type="text" v-model="query" name="query" id="query" >
+        </div>
+        <br>
+
+        <div  class="poleZaprosa">
+            <p>Мой бренд</p>
+            <input type="text" name="brand" id="brand" v-model="brand">
+        </div>
+
+        <br>
+
+        <button v-on:click="start(query)">Поиск</button>
+        
+        <br>
+        <h1>Рейтинг по запросу:"{{query}}"</h1>
+        <br>
+        <ol id="list">
+            <li v-for="(item, index) in massiv" :key="item" :id="item" v-bind:class="{ active: (item==brand) }"  >
+                 {{ item }} 
+            </li>
+        </ol>
+    </div>
+
+</body>
+<script src="/app.js">
+   
+</script>
+</html>
+
